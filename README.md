@@ -6,38 +6,38 @@
 
 ### Arch Linux
 
-```sh
+```bash
 $ sudo pacman -S python-pip
 ```
 
 ### CentOS
 
-```sh
+```bash
 $ sudo dnf install python3-pip python3-wheel
 ```
 
 Para adicionalmente atualizar `setuptools`:
 
-```sh
+```bash
 $ sudo dnf upgrade python3-setuptools
 ```
 
 ### Debian e Ubuntu
 
-```sh
+```bash
 $ sudo apt update
 $ sudo apt install python3-venv python3-pip
 ```
 
 ### Fedora
 
-```sh
+```bash
 $ sudo dnf install python3-pip python3-wheel
 ```
 
 ### OpenSUSE
 
-```sh
+```bash
 $ sudo zypper install python3-pip python3-setuptools python3-wheel
 ```
 
@@ -45,7 +45,7 @@ $ sudo zypper install python3-pip python3-setuptools python3-wheel
 
 - **No Linux**
 
-```sh
+```bash
 $ python3 -m venv myenv
 ```
 
@@ -55,21 +55,29 @@ $ python3 -m venv myenv
 
 - **No Linux**
 
-```sh
+```bash
 $ source myenv/bin/activate
 ```
 
 - **No Windows**
 
 ```powershell
-C:\> .\myenv\scripts\activate
+C:\> myenv\Scripts\activate
 ```
+
+> **Obs.:** No Windows é necessário realizar um procedimento (uma única vez) para carregar o ambiente virtual:
+>
+> 1. Abra o powershell como administrador e insira este comando e tecle \<ENTER\>:
+>
+> ```powershell
+> C:\> Set-ExecutionPolicy Unrestricted -Force
+> ```
 
 ### Atualizando o PIP
 
 - **No Linux**
 
-```sh
+```bash
 (myenv) $ pip install --upgrade pip
 ```
 
@@ -79,21 +87,15 @@ C:\> .\myenv\scripts\activate
 >(myvenv) $ pip install -U pip setuptools
 >```
 
-- **No Windows**
+- **No Windows** (atualiza `pip`, `setuptools` e `whell`)
 
 ```powershell
-(myenv) C:\> python.exe -m pip install --upgrade pip
+(myvenv) C:\> python.exe -m pip install -U pip setuptools wheel
 ```
-
->**Obs.:** Atualizando `pip` e `setuptools`
->
->```powershell
->(myvenv) C:\> python.exe -m pip install -U pip setuptools
->```
 
 **Checando a versão**
 
-```sh
+```bash
 (myenv) $ pip --version
 ```
 
@@ -103,7 +105,7 @@ C:\> .\myenv\scripts\activate
 
 - **No Linux**
 
-```sh
+```bash
 (myenv) $ which python
 ```
 
@@ -115,7 +117,7 @@ C:\> .\myenv\scripts\activate
 
 ### Saindo do ambiente virtual
 
-```sh
+```bash
 $ deactivate
 ```
 
@@ -123,25 +125,25 @@ $ deactivate
 
 **Neste exemplo é instalado o pacote que trata das requisições `http`**
 
-```sh
+```bash
 (myenv) $ pip install requests
 ```
 
 **Instalando versões específicas**
 
-```sh
+```bash
 (myenv) $ pip install 'requests==2.18.4'
 ```
 
 **Para instalar versões de pré-lançamento**
 
-```sh
+```bash
 (myenv) $ pip install --pre requests
 ```
 
 **Instalando extras**
 
-```sh
+```bash
 (myenv) $ pip install 'requests[security]'
 ```
 
@@ -149,38 +151,38 @@ $ deactivate
 
 **Por exemplo entrando na pasta do fonte e instalando**
 
-```sh
+```bash
 (myenv) $ cd google-auth
 (myenv) $ pip install .
 ```
 
 > Instalando código fonte em desenvolvimento (qualquer mudança no código fonte afetará o pacote instalado sem necessidade de reinstalação).
 >
-> ```sh
+> ```bash
 > (myenv) $ pip install --editable .
 > ```
 
 ### Instalando de arquivos locais
 
-```sh
+```bash
 (myenv) $ pip install requests-2.18.4.tar.gz
 ```
 
 > Se você tiver um diretório contendo arquivos de vários pacotes, você pode dizer ao pip para procurar por pacotes lá e não usar o Python Package Index (pypi) de forma alguma:
 >
-> ```sh
+> ```bash
 > (myenv) $ pip install --no-index --find-links=/local/dir/requests
 > ```
 
 ### Pacotes originário de url
 
-```sh
+```bash
 (myenv) $ pip install --index-url http://index.example.com/simple/AlgumPacote
 ```
 
 ### Atualizando pacotes
 
-```sh
+```bash
 (myenv) $ pip install --upgrade requests
 ```
 
@@ -190,13 +192,13 @@ Arquivos de requisitos são usados para a instalação de vários pacotes de uma
 
 - Congelando (criando) o arquivo de requisitos:
 
-```sh
+```bash
 (myenv) $ pip freeze > requirements.txt
 ```
 
 - Agora instalando pacotes a partir de arquivo requirements.txt
 
-```sh
+```bash
 (myenv) $ pip install -r requirements.txt
 ```
 
@@ -204,19 +206,19 @@ Arquivos de requisitos são usados para a instalação de vários pacotes de uma
 
 - Listando pacotes instalados:
 
-```sh
+```bash
 (myenv) $ pip list
 ```
 
 - Desinstalando um pacote:
 
-```sh
+```bash
 (myenv) $ pip uninstall youtube-dl
 ```
 
 - Desinstalando todos os pacotes:
 
-```sh
+```bash
 (myenv) $ pip freeze | xargs pip uninstall -y
 ```
 
@@ -226,13 +228,13 @@ Arquivos de requisitos são usados para a instalação de vários pacotes de uma
 
 - Instalando `pip-check-reqs`:
 
-```sh
+```bash
 (myenv) $ pip install pip-check-reqs
 ```
 
 - Agora para mostrar todos os pacotes extras
 
-```sh
+```bash
 (myenv) $ pip-extra-reqs .
 ```
 
@@ -242,7 +244,7 @@ Arquivos de requisitos são usados para a instalação de vários pacotes de uma
 >
 > A instrução listará os pacotes extras que podemos remover. Podemos criar um arquivo por exemplo `excluir.txt` com apenas os nomes dos pacotes para remover e executar o comando abaixo:
 >
-> ```sh
+> ```bash
 > (myenv) $ cat exclude.txt | xargs pip uninstall -y
 > ```
 
@@ -258,25 +260,25 @@ varre os scripts do projeto em busca de pacotes de dependências necessárias ao
 
 - Instalação do `pipreqs`
 
-```sh
+```bash
 (myenv) $ pip install pipreqs
 ```
 
 - Agora para criar o `requirements.txt` com as dependências:
 
-```sh
+```bash
 (myenv) $ pipreqs .
 ```
 
 > Quando se esta na pasta do projeto ou:
 >
-> ```sh
+> ```bash
 > (myenv) $ pipreqs PastaDoProjeto/
 > ```
 
 - Caso o arquivo `requirements.txt` já exista na pasta use o comando:
 
-```sh
+```bash
 (myenv) $ pipreqs . --force
 ```
 
@@ -1366,7 +1368,7 @@ for valor, boleano in gerador(1,2,3,4,5,6,7,8,9):
 
 > **Saída:**
 > 
-> ```sh
+> ```bash
 > 1 - False
 > 2 - False
 > 3 - False
@@ -1414,7 +1416,7 @@ print(gerador.__doc__)
 
 > **Saída:**
 > 
-> ```sh
+> ```bash
 > 1 - False
 > 2 - False
 > 3 - False
@@ -1458,7 +1460,7 @@ def gerador(*args):
 
 > **Usando o interpretador:**
 > 
-> ```sh
+> ```bash
 > >>> from func import gerador
 > >>> help(gerador)
 > 
@@ -1588,7 +1590,7 @@ def quociente(n1, n2):
 
 > **Chamando o interpretador python3 obtemos:**
 > 
-> ```sh
+> ```bash
 > Python 3.7.3 (default, Jan 22 2021, 20:04:44) 
 > [GCC 8.3.0] on linux
 > Type "help", "copyright", "credits" or "license" for more information.
@@ -1667,7 +1669,7 @@ def quociente(n1, n2):
 > 
 > **Mais informações sobre o módulo:**
 > 
-> ```sh
+> ```bash
 > >>> import calculadora
 > >>> dir(calculadora)
 > ['__author__', '__builtins__', '__cached__', '__copyright__', '__credits__', '__doc__', '__email__', '__file__', '__license__', '__loader__', '__maintainer__', '__name__', '__package__', '__spec__', '__status__', '__version__', 'diferenca', 'produto', 'quociente', 'soma']
@@ -1684,7 +1686,7 @@ print(__name_calculadora__)
 
 > **Chamando o interpretador python3:**
 > 
-> ```sh
+> ```bash
 > $ python3 main.py
 > __main__
 > calculadora
@@ -1715,7 +1717,7 @@ if __name__ == '__main__': # Esta condição será true
 
 > **Saída:**
 > 
-> ```sh
+> ```bash
 > $ python3 calculadora.py 
 > Isto é um módulo, não deve ser
 > executado como script principal!!!
@@ -1948,7 +1950,7 @@ for i in range(100):
 
 > **Saída:**
 > 
-> ```sh
+> ```bash
 > $ python3 libraries.py 
 > 99 %
 > ```
@@ -1969,7 +1971,7 @@ if __name__ == '__main__'
 
 > **Saída:**
 > 
-> ```sh
+> ```bash
 > $ python3 argv.py
 > É necessario ao menos um argumento!!!
 > 
@@ -1992,7 +1994,7 @@ print("Script terminou!!!")
 
 > **Saída:**
 > 
-> ```sh
+> ```bash
 > $ python3 exception.py 
 > Traceback (most recent call last):
 >   File "exception.py", line 1, in <module>
@@ -2055,7 +2057,7 @@ finally:
 
 > **Saída:**
 > 
-> ```sh
+> ```bash
 > $ python3 exception.py 
 > list index out of range
 > Não é possível obter o valor na posição 9
