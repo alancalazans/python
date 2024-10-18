@@ -62,7 +62,7 @@ $ source myenv/bin/activate
 - **No Windows**
 
 ```powershell
-C:\> myenv\Scripts\activate
+C:\> myenv\Scripts\activate.bat
 ```
 
 > **Obs.:** No Windows é necessário realizar um procedimento (uma única vez) para carregar o ambiente virtual:
