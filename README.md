@@ -531,11 +531,11 @@ Exemplo:
 x = 5
 y = 10
 resultado = x > 0 and y < 20
-print(resultado)  # True
+print(resultado)  # --> True
 
 # Curto-circuito
 resultado = x < 0 and print("Isso não será executado")
-print(resultado)  # False
+print(resultado)  # --> False
 ```
 
 b) or (OU lógico):
@@ -549,11 +549,11 @@ Exemplo:
 x = 5
 y = 10
 resultado = x > 10 or y < 20
-print(resultado)  # True
+print(resultado)  # --> True
 
 # Curto-circuito
 resultado = x > 0 or print("Isso não será executado")
-print(resultado)  # True
+print(resultado)  # --> True
 ```
 
 c) not (NÃO lógico):
@@ -565,7 +565,7 @@ Exemplo:
 ```python
 x = True
 resultado = not x
-print(resultado)  # False
+print(resultado)  # --> False
 ```
 
 1. Condicionais
@@ -619,7 +619,7 @@ Python também suporta expressões condicionais em uma única linha:
 ```python
 idade = 20
 status = "Maior de idade" if idade >= 18 else "Menor de idade"
-print(status)  # Maior de idade
+print(status)  # --> Maior de idade
 ```
 
 1. Truthy e Falsy
@@ -646,22 +646,22 @@ if numero:
 ```python
 fruta = 'kiwi'
 if fruta == 'kiwi':
-    print("É kiwi") # -> É kiwi
+    print("É kiwi") # --> É kiwi
 else:
     print("Não é kiwi")
 
 # Outra forma:
 mensagem = 'É kiwi' if fruta == 'kiwi' else 'Não é kiwi'
-print(mensagem) # -> É kiwi
+print(mensagem) # --> É kiwi
 # ou
-print('É kiwi' if fruta == 'kiwi' else 'Não é kiwi') # -> É kiwi
+print('É kiwi' if fruta == 'kiwi' else 'Não é kiwi') # --> É kiwi
 
 # elif
 fruta = 'maça'
 if fruta == 'kiwi':
     print("É kiwi")
 elif fruta == 'maça':
-    print('É maça') # -> É maça
+    print('É maça') # --> É maça
 elif fruta == 'abacaxi':
     pass # Instrução para quando não há ação 
          # evitando dessa forma mensagem de erro.
@@ -688,7 +688,7 @@ if False: # Equivale a 'false':
           # None (palavra reservada da linguagem).
     print('É verdadeiro!')
 else:
-    print('É falso!') # É falso
+    print('É falso!') # --> É falso
 
 # Outro exemplo
 valor1 = None
