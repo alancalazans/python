@@ -301,7 +301,7 @@ para string de
 múltiplas linhas.
 """
 
-print(texto)  # -> Saída:
+print(texto)  # --> Saída:
               # Aspas triplas
               # também são usadas
               # para string de
@@ -313,47 +313,47 @@ print(texto)  # -> Saída:
 course = 'Curso'
 language = 'Python'
 
-# -> Formatando a saída <-
+# --> Formatando a saída <--
 # Variável `result` irá conter "Curso de Python":
 result = f'{course} de {language}'
 # ou
 result = '{} de {}'.format(course, language)
-print(result) # -> Curso de Python
+print(result) # --> Curso de Python
 
 # Outra forma de formatar saída:
-print('{b}, {a}'.format(a=course, b=language)) # -> Python, Curso
+print('{b}, {a}'.format(a=course, b=language)) # --> Python, Curso
 
 # Todos os caracteres em maiúsculo:
-print(result.upper()) # -> CURSO DE PYTHON
+print(result.upper()) # --> CURSO DE PYTHON
 
 # Todos os caracteres em mínusculo:
-print(result.lower()) # -> curso de python
+print(result.lower()) # --> curso de python
 
 # Indices dos elementos:
 # 012345678901234
 # |||||||||||||||
 # Curso de Python
 
-# -> Busca <-
+# --> Busca <-
 # Imprimir o indice onde inicia a palavra `Python`:
-print(result.find('Python')) # -> 9
+print(result.find('Python')) # --> 9
 
-# -> Substring <-
+# --> Substring <-
 # A partir do indice zero imprimir 5 elementos:
-print(result[0:5]) # -> Curso
+print(result[0:5]) # --> Curso
 
 # Invertendo string:
-print(result[::-1]) # -> nohtyP ed osruC
+print(result[::-1]) # --> nohtyP ed osruC
 
 # Qtde de letras 'o' na frase armazenda em `result`:
-print(result.count('o')) # -> 2
+print(result.count('o')) # --> 2
 
 # Substitui todos as letras `o` por `x`:
-print(result.replace('o', 'x')) # -> Cursx de Pythxn
+print(result.replace('o', 'x')) # --> Cursx de Pythxn
 
 # Cria uma lista de elementos quebrando
 # a frase nos espaços:
-print(result.split(' ')) # -> ['Curso', 'de', 'Python']
+print(result.split(' ')) # --> ['Curso', 'de', 'Python']
 ```
 
 ## Listas
@@ -363,43 +363,43 @@ print(result.split(' ')) # -> ['Curso', 'de', 'Python']
 # Indices:    0      1    2     3
 #             |      |    |     |
 myList = ["Strings", 15, 15.6, True]
-print(myList) # -> ["Strings", 15, 15.6, True]
+print(myList) # --> ["Strings", 15, 15.6, True]
 
 # A partir do indice zero imprimir tres elementos:
-print(myList[0:3]) # -> ['Strings', 15, 15.6]
+print(myList[0:3]) # --> ['Strings', 15, 15.6]
 
 # Acrescente ao final o número `6`:
 myList.append(6)
-print(myList) # -> ["Strings", 15, 15.6, True, 6]
+print(myList) # --> ["Strings", 15, 15.6, True, 6]
 
 # Insirindo a frase `outra string`
 # na posição de indice 1:
 myList.insert(1, "outra string")
 # Indices:              0             1        2    3     4    5
 #                       |             |        |    |     |    |
-print(myList) # -> ['Strings', 'outra string', 15, 15.6, True, 6]
+print(myList) # --> ['Strings', 'outra string', 15, 15.6, True, 6]
 
-print(myList[1]) # -> outra string
+print(myList[1]) # --> outra string
 
 # Remova o elemento `15` da lista
 myList.remove(15)
-print(myList) # -> ['Strings', 'outra string', 15.6, True, 6]
+print(myList) # --> ['Strings', 'outra string', 15.6, True, 6]
 
 # Removendo último elemento da lista (`6`) e
 # atribuindo a variável `lastValue`:
 lastValue = myList.pop()
 
-print(myList) # -> ['Strings', 'outra string', 15, 15.6, True]
+print(myList) # --> ['Strings', 'outra string', 15, 15.6, True]
 
 # Variável `lastValue` contém o valor `6`:
-print(lastValue) # -> 6
+print(lastValue) # --> 6
 
 # Criando uma lista de números desordenada:
 myList = [1,9,22,6,8,65,14,99]
 
 # Ordenando a lista:
 myList.sort()
-print(myList) # -> [1, 6, 8, 9, 14, 22, 65, 99]
+print(myList) # --> [1, 6, 8, 9, 14, 22, 65, 99]
 
 # Invertendo a ordem da lista:
 myList.sort(reverse = True)
@@ -409,12 +409,12 @@ print(myList) # [99, 65, 22, 14, 9, 8, 6, 1]
 # esta estender a primeira `myList`:
 myListTwo = [22, 23]
 myList.extend(myListTwo)
-print(myList) # -> [99, 65, 22, 14, 9, 8, 6, 1, 22, 23]
+print(myList) # --> [99, 65, 22, 14, 9, 8, 6, 1, 22, 23]
 
 # Método `append` é diferente do método `extend`
 myList = [1, 9, 22, 6, 8, 65, 14, 99]
 myList.append(myListTwo)
-print(myList) # -> [1, 9, 22, 6, 8, 65, 14, 99, [22, 23]]
+print(myList) # --> [1, 9, 22, 6, 8, 65, 14, 99, [22, 23]]
 ```
 
 ## Tuplas
@@ -425,22 +425,22 @@ Tuplas podem armazenar todo tipo de dados ***(inteiros, boleanos, strings, lista
 # Indices:  0   1   2   3   4   5   6   7   8   9
 #           |   |   |   |   |   |   |   |   |   |
 result  = ('O','l','á',' ','P','e','s','s','o','a')
-print(result) # -> ('O','l','á',' ','P','e','s','s','o','a')
+print(result) # --> ('O','l','á',' ','P','e','s','s','o','a')
 
 # A partir do indice zero imprimir 3 elementos:
-print(result[0:3]) # -> ('O','l','á')
+print(result[0:3]) # --> ('O','l','á')
 
 # A partir do indice zero imprimir 10 elementos:
-print(result[0:10]) # -> ('O','l','á',' ','P','e','s','s','o','a')
+print(result[0:10]) # --> ('O','l','á',' ','P','e','s','s','o','a')
 
 # Indices: 0     1       2
 #          |     |       |
 myTuple = (1, "string", True)
-print(myTuple) # -> (1, 'string', True)
-print(myTuple[0]) # -> 1
+print(myTuple) # --> (1, 'string', True)
+print(myTuple[0]) # --> 1
 
 # A partir do indice zero imprimir 2 elementos:
-print(myTuple[0:2]) # -> (1, 'string')
+print(myTuple[0:2]) # --> (1, 'string')
 ```
 
 > **Obs.:** Tuplas podem ser usadas para armazer valores que podem funcionar como constantes para, por exemplo, inicializar base de dados.
@@ -451,55 +451,55 @@ Dicionários assim como as tuplas podem armazenar todo tipo de dados, entretanto
 
 ```python
 dicionario = {'a' : True, 5 : "Esta é uma string"}
-print(dicionario) # -> {'a' : True, 5 : 'Esta é uma string'}
+print(dicionario) # --> {'a' : True, 5 : 'Esta é uma string'}
 
 # A chave 'a' repetida retém o
 # último valor a ela atribuído:
 dicionario = {'a' : True, 5 : "Esta é uma string", 'a' : 100}
-print(dicionario) # -> {'a': 100, 5: 'Esta é uma string'}
+print(dicionario) # --> {'a': 100, 5: 'Esta é uma string'}
 
 # Acrescentando novos pares (chave : valor):
 dicionario['c'] = 'nova string'
-print(dicionario) # -> saída:
+print(dicionario) # --> saída:
                   # {'a': 100, 5: 'Esta é uma string',
                   #  'c': 'nova string'}
 
 # Se a chave existe atualiza senão cria:
 dicionario['a'] = False
-print(dicionario) # -> saída:
+print(dicionario) # --> saída:
                   # {'a': False, 5: 'Esta é uma string',
                   #  'c': 'nova string'}
 
 # Obtendo valores do dicionário
-print(dicionario['a']) # -> False
+print(dicionario['a']) # --> False
 
 print(dicionario['z']) # Retorna um erro pois a
                        # chave 'z' não existe
 
 print(dicionario.get('z', False)) # Definimos um valor padrão
                                   # caso a chave não exista
-                                  # -> saída:
+                                  # --> saída:
                                   # False
 
 # Eliminando pares (chave : valor):
 del dicionario[5]
-print(dicionario) # -> {'a': False, 'c': 'nova string'}
+print(dicionario) # --> {'a': False, 'c': 'nova string'}
 
 # Obter todas as chaves:
 chaves = dicionario.keys()
-print(chaves) # -> dict_keys(['a', 'c'])
+print(chaves) # --> dict_keys(['a', 'c'])
 
 # Obter chaves e valores como lista:
 chaves = list(dicionario.keys())
 valores = list(dicionario.values())
-print(chaves) # -> ['a', 'c']
-print(valores) # -> [False, 'nova string']
+print(chaves) # --> ['a', 'c']
+print(valores) # --> [False, 'nova string']
 
 # Obter chaves e valores como tupla:
 chaves = tuple(dicionario.keys())
 valores = tuple(dicionario.values())
-print(chaves) # -> ('a', 'c')
-print(valores) # -> (False, 'nova string')
+print(chaves) # --> ('a', 'c')
+print(valores) # --> (False, 'nova string')
 
 # Acrescentando um dicionario em outro:
 dicionarioDois = {'z' : 23, 'w' : 88}
@@ -509,7 +509,7 @@ dicionarioDois = {'z' : 23, 'w' : 88}
 # dicionario['w'] = dicionarioDois['w']
 # Mas a forma usual é:
 dicionario.update(dicionarioDois)
-print(dicionario) # -> saída:
+print(dicionario) # --> saída:
                   # {'a': False, 'c': 'nova string', 'z': 23,
                   #  'w': 88}
 ```
@@ -1219,7 +1219,7 @@ def funcao_exemplo(**kwargs):
 # Chamada da função
 funcao_exemplo(nome="Maria", idade=25, cidade="São Paulo")
 
-# Saída:
+# --> Saída:
 # nome = Maria
 # idade = 25
 # cidade = São Paulo
@@ -1241,7 +1241,7 @@ def funcao_exemplo(*args, **kwargs):
 # Chamada da função
 funcao_exemplo(1, 2, 3, nome="Maria", idade=25)
 
-# Saída:
+# --> Saída:
 # Argumentos posicionais: (1, 2, 3)
 # Argumentos nomeados: {'nome': 'Maria', 'idade': 25}
 ```
